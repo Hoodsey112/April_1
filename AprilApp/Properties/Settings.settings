@@ -1,0 +1,18 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="AprilApp.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="hostDef" Type="System.String" Scope="User">
+      <Value Profile="(Default)">localhost</Value>
+    </Setting>
+    <Setting Name="userNameDef" Type="System.String" Scope="User">
+      <Value Profile="(Default)">postgres</Value>
+    </Setting>
+    <Setting Name="pswdDef" Type="System.String" Scope="User">
+      <Value Profile="(Default)">GreeNW00D_112</Value>
+    </Setting>
+    <Setting Name="dataBaseDef" Type="System.String" Scope="User">
+      <Value Profile="(Default)">AprilDB</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
