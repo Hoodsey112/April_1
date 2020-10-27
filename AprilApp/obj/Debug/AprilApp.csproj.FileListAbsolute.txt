@@ -29,3 +29,5 @@ C:\Users\ХудяковПЮ\source\.NET Core\AprilApp\AprilApp\obj\Debug\AprilAp
 C:\Users\ХудяковПЮ\source\.NET Core\AprilApp\AprilApp\obj\Debug\AprilApp.csproj.CopyComplete
 C:\Users\ХудяковПЮ\source\.NET Core\AprilApp\AprilApp\obj\Debug\AprilApp.exe
 C:\Users\ХудяковПЮ\source\.NET Core\AprilApp\AprilApp\obj\Debug\AprilApp.pdb
+C:\Users\ХудяковПЮ\source\.NET Core\AprilApp\AprilApp\obj\Debug\AprilApp.ColumnsSettingsForm.resources
+C:\Users\ХудяковПЮ\source\.NET Core\AprilApp\AprilApp\obj\Debug\AprilApp.SearchForm.resources
