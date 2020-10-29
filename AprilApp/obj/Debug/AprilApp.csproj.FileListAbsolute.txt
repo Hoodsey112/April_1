@@ -31,3 +31,6 @@ C:\Users\ХудяковПЮ\source\.NET Core\AprilApp\AprilApp\obj\Debug\AprilAp
 C:\Users\ХудяковПЮ\source\.NET Core\AprilApp\AprilApp\obj\Debug\AprilApp.pdb
 C:\Users\ХудяковПЮ\source\.NET Core\AprilApp\AprilApp\obj\Debug\AprilApp.ColumnsSettingsForm.resources
 C:\Users\ХудяковПЮ\source\.NET Core\AprilApp\AprilApp\obj\Debug\AprilApp.SearchForm.resources
+C:\Users\ХудяковПЮ\source\.NET Core\AprilApp\AprilApp\obj\Debug\AprilApp.AutorithationForm.resources
+C:\Users\ХудяковПЮ\source\.NET Core\AprilApp\AprilApp\bin\Debug\Newtonsoft.Json.dll
+C:\Users\ХудяковПЮ\source\.NET Core\AprilApp\AprilApp\bin\Debug\Newtonsoft.Json.xml

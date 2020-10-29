@@ -31,6 +31,7 @@
             this.okBTN = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.ViewColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.columnHeaderText = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.columnName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -54,6 +55,7 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ViewColumn,
+            this.columnHeaderText,
             this.columnName});
             this.dataGridView1.Location = new System.Drawing.Point(12, 12);
             this.dataGridView1.MultiSelect = false;
@@ -69,12 +71,18 @@
             this.ViewColumn.HeaderText = "Видимость столбца";
             this.ViewColumn.Name = "ViewColumn";
             // 
+            // columnHeaderText
+            // 
+            this.columnHeaderText.HeaderText = "Имя столбца";
+            this.columnHeaderText.Name = "columnHeaderText";
+            this.columnHeaderText.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.columnHeaderText.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
             // columnName
             // 
-            this.columnName.HeaderText = "Имя столбца";
+            this.columnName.HeaderText = "name";
             this.columnName.Name = "columnName";
-            this.columnName.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.columnName.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.columnName.Visible = false;
             // 
             // ColumnsSettingsForm
             // 
@@ -96,6 +104,7 @@
         private System.Windows.Forms.Button okBTN;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewCheckBoxColumn ViewColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn columnHeaderText;
         private System.Windows.Forms.DataGridViewTextBoxColumn columnName;
     }
 }

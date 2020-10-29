@@ -22,9 +22,10 @@ namespace AprilApp
         {
             InitializeComponent();
             _main = main;
+
             for (int i = 0; i < main.customDataGridView1.Columns.Count; i++)
             {
-                dataGridView1.Rows.Add(main.customDataGridView1.Columns[i].Visible, main.customDataGridView1.Columns[i].Name);
+                dataGridView1.Rows.Add(main.customDataGridView1.Columns[i].Visible, main.customDataGridView1.Columns[i].HeaderText, main.customDataGridView1.Columns[i].Name);
             }
         }
 
@@ -40,6 +41,14 @@ namespace AprilApp
                 if (dataGridView1.CurrentCell != null)
                 {
                     _main.customDataGridView1.Columns[dataGridView1.Rows[dataGridView1.CurrentCell.RowIndex].Index].Visible = bool.Parse(dataGridView1.Rows[dataGridView1.CurrentCell.RowIndex].Cells[0].Value.ToString());
+                    foreach (ColumnSettings column in _main.person.ColumnSettings)
+                    {
+                        if (column.columnName == dataGridView1.Rows[dataGridView1.CurrentCell.RowIndex].Cells[2].Value.ToString())
+                        {
+                            column.columnVisible = bool.Parse(dataGridView1.Rows[dataGridView1.CurrentCell.RowIndex].Cells[0].Value.ToString());
+                            break;
+                        }
+                    }
                 }
             }
         }
