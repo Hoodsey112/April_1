@@ -12,18 +12,23 @@ namespace AprilApp
 {
     public partial class AutorithationForm : Form
     {
-        public AutorithationForm()
+        // Для авторизации используется логин и пароль admin
+        Form1 form;
+        public AutorithationForm(Form1 form1)
         {
             InitializeComponent();
+            form = form1;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Person loginPerson = Query.Login(loginTB.Text, pswdTB.Text);
-            if ( loginPerson != null)
+            form.person = Query.Login(loginTB.Text, pswdTB.Text);
+            if ( form.person != null)
             {
-                
+                MessageBox.Show("Вы успешно авторизованы", "Добро пожаловать", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Close();
             }
+            else MessageBox.Show("Неверно ввели логин или пароль", "Внимание", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
     }
 }

@@ -286,7 +286,7 @@ namespace AprilApp
                 person.ColumnSettings = GetSettings(person.ID);
             }
 
-            if (person != null) return person;
+            if (person.ID != 0) return person;
             else return null;
         }
 

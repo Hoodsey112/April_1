@@ -1,0 +1,7 @@
+[{"lastname":"Сидоров","firstname":"Петр","patrname":"","bdate":"03.05.1995","login":"Sidorov","password":"912ec803b2ce49e4a541068d495ab570"},
+ {"lastname":"Тестов","firstname":"Тест","patrname":"Тестович","bdate":"29.10.2020","login":"test","password":""},
+ {"lastname":"Васильев","firstname":"Василий","patrname":"Васильевич","bdate":"29.10.1982","login":"Vasilyev","password":""},
+ {"lastname":"Петров","firstname":"Петр","patrname":"Петрович","bdate":"01.05.1977","login":"PetrovPP","password":"26efd93b7b02eeab688480a0a758b801"},
+ {"lastname":"Иванов","firstname":"Иван","patrname":"Иванович","bdate":"10.07.1991","login":"IvanovII","password":"d8578edf8458ce06fbc5bb76a58c5ca4"},
+ {"lastname":"Журавлев","firstname":"Алексей","patrname":"Николаевич","bdate":"10.03.1989","login":"JuravlevAN","password":""},
+ {"lastname":"Попович","firstname":"Алексей","patrname":"Романович","bdate":"29.08.1983","login":"PopovichAR","password":""},]

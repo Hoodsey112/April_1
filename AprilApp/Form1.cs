@@ -31,10 +31,21 @@ namespace AprilApp
         {
             InitializeComponent();
             FuncConnection();
-            person = Query.Login("admin", "admin");
-            InitializeColumn();
+            AutorForm();
+            //person = Query.Login("admin", "admin");
+            
             KeyPreview = true;
             firstRun = false;
+        }
+
+        private void AutorForm()
+        {
+            using (AutorithationForm aForm = new AutorithationForm(this))
+            {
+                aForm.ShowDialog();
+            }
+            if (person == null || person.ID == 0) Environment.Exit(0);
+            else InitializeColumn();
         }
 
         /// <summary>
@@ -66,9 +77,8 @@ namespace AprilApp
             try
             { 
                 customDataGridView1.AutoGenerateColumns = false;
-
                 if (person.ColumnSettings != null)
-                {
+                {     
                     for (int i = 0; i < customDataGridView1.Columns.Count; i++)
                     {
                         customDataGridView1.Columns[i].SortMode = DataGridViewColumnSortMode.NotSortable;
@@ -299,9 +309,36 @@ namespace AprilApp
             if (loadData.Rows.Count > 0)
             {
                 string output = JsonConvert.SerializeObject(loadData);
-                string path = $@"{Application.StartupPath}\output.txt";
+                string path = $@"{Application.StartupPath}\output.json";
                 File.WriteAllText(path, output);
             }
+        }
+
+        private void loadJsonBTN_Click(object sender, EventArgs e)
+        {
+            string fileContent = null;
+
+            using (OpenFileDialog fDialog = new OpenFileDialog())
+            {
+                fDialog.DefaultExt = ".json";
+                fDialog.Filter = "JSON document (.json)|*.json";
+                fDialog.InitialDirectory = $"{Application.StartupPath}\\";
+                if (fDialog.ShowDialog() == DialogResult.OK)
+                {
+                    string filePath = fDialog.FileName;
+                    Stream fileStream = fDialog.OpenFile();
+
+                    using (StreamReader sReader = new StreamReader(fileStream))
+                    {
+                        fileContent = sReader.ReadToEnd();
+                    }
+                }
+            }
+
+            customDataGridView1.DataSource = null;
+            DataTable jsonTable = JsonConvert.DeserializeObject<DataTable>(fileContent);
+
+            customDataGridView1.DataSource = jsonTable;
         }
     }
 }

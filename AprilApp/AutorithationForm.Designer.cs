@@ -55,6 +55,7 @@
             // 
             this.pswdTB.Location = new System.Drawing.Point(67, 38);
             this.pswdTB.Name = "pswdTB";
+            this.pswdTB.PasswordChar = '*';
             this.pswdTB.Size = new System.Drawing.Size(192, 20);
             this.pswdTB.TabIndex = 3;
             // 
@@ -87,7 +88,9 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.loginTB);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "AutorithationForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AutorithationForm";
             this.ResumeLayout(false);
             this.PerformLayout();

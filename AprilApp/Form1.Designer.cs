@@ -57,6 +57,7 @@
             this.login = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.password = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.createJsonBTN = new System.Windows.Forms.Button();
+            this.loadJsonBTN = new System.Windows.Forms.Button();
             this.settingsDGV.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.customDataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -305,11 +306,22 @@
             this.createJsonBTN.UseVisualStyleBackColor = true;
             this.createJsonBTN.Click += new System.EventHandler(this.createJsonBTN_Click);
             // 
+            // loadJsonBTN
+            // 
+            this.loadJsonBTN.Location = new System.Drawing.Point(661, 37);
+            this.loadJsonBTN.Name = "loadJsonBTN";
+            this.loadJsonBTN.Size = new System.Drawing.Size(127, 23);
+            this.loadJsonBTN.TabIndex = 25;
+            this.loadJsonBTN.Text = "Загрузить JSON";
+            this.loadJsonBTN.UseVisualStyleBackColor = true;
+            this.loadJsonBTN.Click += new System.EventHandler(this.loadJsonBTN_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.loadJsonBTN);
             this.Controls.Add(this.createJsonBTN);
             this.Controls.Add(this.pswdTB);
             this.Controls.Add(this.loginTB);
@@ -366,6 +378,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn login;
         private System.Windows.Forms.DataGridViewTextBoxColumn password;
         private System.Windows.Forms.Button createJsonBTN;
+        private System.Windows.Forms.Button loadJsonBTN;
     }
 }
 
