@@ -7,6 +7,7 @@ using System.Windows.Forms;
 
 namespace AprilApp
 {
+    //Тестовое задание №3
     interface ICheckableControl
     {
         bool EmptyDataCheck { get; set; }

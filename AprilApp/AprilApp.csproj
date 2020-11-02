@@ -94,6 +94,7 @@
     <Compile Include="ColumnsSettingsForm.Designer.cs">
       <DependentUpon>ColumnsSettingsForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ConverterClass.cs" />
     <Compile Include="CustomControlCollection.cs" />
     <Compile Include="CustomDataGridView.cs">
       <SubType>Component</SubType>

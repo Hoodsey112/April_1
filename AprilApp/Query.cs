@@ -7,6 +7,7 @@ using System.Text;
 
 namespace AprilApp
 {
+    //Тестовое задание №1
     class Query
     {
         private string connectionString = $"host={Properties.Settings.Default.hostDef}; username={Properties.Settings.Default.userNameDef}; password={Properties.Settings.Default.pswdDef}; database={Properties.Settings.Default.dataBaseDef}";

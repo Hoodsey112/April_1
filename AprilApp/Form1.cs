@@ -308,16 +308,12 @@ namespace AprilApp
         {
             if (loadData.Rows.Count > 0)
             {
-                string output = JsonConvert.SerializeObject(loadData);
-                string path = $@"{Application.StartupPath}\output.json";
-                File.WriteAllText(path, output);
+                ConverterClass.CreateJSONFile(loadData);
             }
         }
 
         private void loadJsonBTN_Click(object sender, EventArgs e)
         {
-            string fileContent = null;
-
             using (OpenFileDialog fDialog = new OpenFileDialog())
             {
                 fDialog.DefaultExt = ".json";
@@ -325,6 +321,7 @@ namespace AprilApp
                 fDialog.InitialDirectory = $"{Application.StartupPath}\\";
                 if (fDialog.ShowDialog() == DialogResult.OK)
                 {
+                    string fileContent = null;
                     string filePath = fDialog.FileName;
                     Stream fileStream = fDialog.OpenFile();
 
@@ -332,13 +329,11 @@ namespace AprilApp
                     {
                         fileContent = sReader.ReadToEnd();
                     }
+
+                    customDataGridView1.DataSource = null;
+                    customDataGridView1.DataSource = ConverterClass.ConverterJSONtoDataTable(fileContent);
                 }
             }
-
-            customDataGridView1.DataSource = null;
-            DataTable jsonTable = JsonConvert.DeserializeObject<DataTable>(fileContent);
-
-            customDataGridView1.DataSource = jsonTable;
         }
     }
 }

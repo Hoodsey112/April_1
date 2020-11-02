@@ -9,7 +9,7 @@ namespace AprilApp
 {
     public class BalloonTip
     {
-
+        //Тестовое задание №4
         public void Show(string title, string text, Control control, ToolTipIcon icon, double showTime)
         {
             ToolTip tTip = new ToolTip();

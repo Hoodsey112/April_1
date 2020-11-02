@@ -3,6 +3,7 @@ using System.Windows.Forms;
 
 namespace AprilApp
 {
+    //Тестовое задание №2
     public class CustomDataGridView:DataGridView
     {
 
